@@ -1,50 +1,135 @@
-# Welcome to your Expo app 👋
+# 🌿 FloraCare – AI-Powered Plant Identifier & Care App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+FloraCare is a mobile application that helps users **identify plants using photos** and provides **clear, actionable care instructions** such as watering, sunlight, soil, and temperature needs. The app is designed as a fast, modern MVP using **React Native + Expo**, and runs seamlessly on real Android devices via **Expo Go**.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+* 📸 **Plant Identification**
+  Upload or capture a photo of a plant and identify it using an AI-powered image recognition API.
 
-2. Start the app
+* 🌱 **Actionable Plant Care Guidance**
+  Easy-to-understand care instructions including:
 
-   ```bash
-   npx expo start
-   ```
+  * Watering frequency
+  * Sunlight requirements
+  * Temperature range
+  * Soil recommendations
+  * Fertilizer guidance
 
-In the output, you'll find options to open the app in a
+* 📱 **Real Device Testing**
+  Built with Expo for rapid iteration and tested on a real Android device using Expo Go.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* 🧱 **Clean Architecture**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+  * Expo Router (file-based navigation)
+  * TypeScript
+  * Separated API & care-logic layers
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠️ Tech Stack
 
-```bash
-npm run reset-project
+* **Frontend:** React Native, Expo, Expo Router
+* **Language:** TypeScript
+* **AI API:** Plant.id (image-based plant identification)
+* **State & Logic:** React Hooks
+* **Platform:** Android (Expo Go)
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```
+FloraCare/
+├── app/                # Expo Router screens
+│   ├── (tabs)/         # Tab navigation
+│   ├── modal.tsx       # Identification & care result screen
+│   └── _layout.tsx
+├── services/           # API integration layer
+├── utils/              # Plant care logic & mappers
+├── components/         # Reusable UI components
+├── assets/             # Images & static assets
+├── app.json            # Expo configuration
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ▶️ Running the App Locally
 
-To learn more about developing your project with Expo, look at the following resources:
+### Prerequisites
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Node.js (v18+ recommended)
+* Expo CLI
+* Expo Go app installed on Android device
 
-## Join the community
+### Steps
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Open **Expo Go** on your phone
+2. Scan the QR code shown in the terminal or browser
+3. App loads instantly on your device
+
+---
+
+## 🔑 Environment Configuration
+
+The Plant Identification API key is configured via Expo config:
+
+```json
+"extra": {
+  "PLANT_ID_API_KEY": "YOUR_API_KEY"
+}
+```
+
+> ⚠️ For production, API keys should be moved to a secure backend.
+
+---
+
+## 🏷️ Versioning
+
+* **Current stable version:** `floracare-mvp-v1`
+* Tagged using Git for clean version control and rollback safety.
+
+---
+
+## 🧠 Design Philosophy
+
+FloraCare focuses on:
+
+* **Clarity over complexity** – simple care instructions for beginners
+* **Fast MVP iteration** – real device testing from day one
+* **Extensibility** – easy to replace APIs or add new intelligence layers
+
+---
+
+## 🔮 Future Enhancements
+
+* 💾 Save identified plants to "My Plants"
+* ⏰ Watering & care reminders
+* 🦠 Disease detection
+* 🤖 AI-generated personalized care plans
+* 📦 APK / Play Store release
+
+---
+
+## 👤 Author
+
+**Shravankumar P**
+AI / ML Engineer | Product Builder
+
+---
+
+## 📜 License
+
+This project is currently for learning, experimentation, and portfolio use. Licensing can be added as the project evolves.
+
+---
+
+🌱 *FloraCare – helping plants (and people) thrive.*
